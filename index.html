@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maliha Yahya – Brand & Visual Designer</title>
+<meta name="description" content="Maliha Yahya – senior brand and visual designer. Logo design, brand kits, packaging, social media, UI/UX and print. Hire on Upwork.">
+<meta name="referrer" content="no-referrer">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,500;1,700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0d1a;--bg2:#12152a;--card:#161a33;--line:#262b4d;--txt:#eef0ff;--mute:#9aa0c3;--coral:#ff5a36;--sun:#ffb23e;--grad:linear-gradient(135deg,#ff5a36,#ffb23e)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:'Poppins',system-ui,sans-serif;overflow-x:hidden}
+.btn,.filters button,button{font-family:'Poppins',sans-serif}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+em.s{font-family:'Playfair Display',serif;font-style:italic;font-weight:700;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* NAV */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:.35s;padding:18px 0}
+nav.solid{background:rgba(11,13,26,.82);backdrop-filter:blur(14px);padding:12px 0;border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:800;font-size:22px;letter-spacing:-.5px}.logo span{color:var(--coral)}
+.links{display:flex;gap:26px;font-size:14px;color:var(--mute)}
+.links a:hover{color:var(--txt)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--grad);color:#fff;font-weight:600;font-size:14px;padding:12px 22px;border-radius:999px;box-shadow:0 10px 30px -10px rgba(255,90,54,.7);transition:.25s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 40px -12px rgba(255,90,54,.85)}
+.btn.ghost{background:transparent;border:1px solid var(--line);box-shadow:none}
+.btn.ghost:hover{border-color:var(--coral)}
+@media(max-width:860px){.links{display:none}}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:120px 0 60px;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.45;animation:float 14s ease-in-out infinite}
+.b1{width:520px;height:520px;background:#ff5a36;top:-120px;right:-120px}
+.b2{width:420px;height:420px;background:#5b4bff;bottom:-140px;left:-120px;animation-delay:-5s}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,-30px) scale(1.08)}}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:50px;align-items:center;position:relative;z-index:2}
+.tag{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--mute);border:1px solid var(--line);padding:8px 16px;border-radius:999px}
+.tag i{width:8px;height:8px;border-radius:50%;background:#33d17a;box-shadow:0 0 0 0 rgba(51,209,122,.7);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(51,209,122,0)}100%{box-shadow:0 0 0 0 rgba(51,209,122,0)}}
+.hero h1{font-size:clamp(44px,6.4vw,86px);line-height:.98;font-weight:800;letter-spacing:-2px;margin:22px 0 18px}
+.typed{font-size:clamp(18px,2vw,24px);color:var(--mute);min-height:34px}
+.typed b{color:var(--txt);font-weight:600;border-right:2px solid var(--coral);padding-right:4px;animation:caret .8s step-end infinite}
+@keyframes caret{50%{border-color:transparent}}
+.hero p{color:var(--mute);margin:18px 0 30px;max-width:520px;line-height:1.7}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.stats{display:flex;gap:34px;margin-top:42px;flex-wrap:wrap}
+.stats div b{font-size:34px;font-weight:800;display:block;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stats div span{font-size:12px;color:var(--mute);letter-spacing:1px;text-transform:uppercase}
+.collage{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;transform:rotate(-6deg) scale(1.05)}
+.collage .col{display:flex;flex-direction:column;gap:14px;animation:up 30s linear infinite}
+.collage .col:nth-child(2){animation-direction:reverse;margin-top:-60px}
+.collage img{border-radius:14px;width:100%;aspect-ratio:4/3.2;object-fit:cover;box-shadow:0 20px 40px -20px #000}
+@keyframes up{from{transform:translateY(0)}to{transform:translateY(-50%)}}
+.collage-box{height:620px;overflow:hidden;mask-image:linear-gradient(transparent,#000 15%,#000 85%,transparent);-webkit-mask-image:linear-gradient(transparent,#000 15%,#000 85%,transparent)}
+@media(max-width:960px){.hero .wrap{grid-template-columns:1fr}.collage-box{height:380px}}
+
+/* MARQUEE */
+.marquee{border-block:1px solid var(--line);padding:22px 0;overflow:hidden;background:var(--bg2)}
+.track{display:flex;gap:56px;width:max-content;animation:mq 40s linear infinite}
+.track span{font-size:20px;font-weight:700;color:#4a5080;white-space:nowrap;letter-spacing:1px}
+.track span b{color:var(--coral);margin-right:56px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* SECTIONS */
+section{padding:100px 0}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:34px}
+.kick{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--coral);font-weight:600;display:flex;align-items:center;gap:12px}
+.kick:before{content:'';width:34px;height:2px;background:var(--coral)}
+h2{font-size:clamp(34px,4.2vw,56px);font-weight:800;letter-spacing:-1.5px;line-height:1.05;margin-top:12px}
+.sub{color:var(--mute);max-width:520px;line-height:1.7}
+
+/* FILTERS */
+.filters{display:flex;gap:10px;flex-wrap:wrap;position:sticky;top:70px;z-index:20;padding:14px 0;background:linear-gradient(var(--bg) 70%,transparent)}
+.filters button{font-size:14px;color:var(--mute);background:var(--card);border:1px solid var(--line);padding:10px 18px;border-radius:999px;cursor:pointer;transition:.25s}
+.filters button:hover{color:var(--txt);border-color:#3a4170}
+.filters button.on{background:var(--grad);color:#fff;border-color:transparent}
+.filters button small{opacity:.7;margin-left:4px}
+
+/* GRID */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:22px}
+.card{position:relative;border-radius:18px;overflow:hidden;background:var(--card);border:1px solid var(--line);cursor:pointer;transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s,opacity .5s;opacity:0;transform:translateY(40px)}
+.card.in{opacity:1;transform:none}
+.card:hover{transform:translateY(-8px);box-shadow:0 30px 60px -25px rgba(255,90,54,.45)}
+.card .ph{aspect-ratio:4/3.1;overflow:hidden;background:#1d2142}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.card:hover .ph img{transform:scale(1.08)}
+.card .meta{padding:18px 20px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.card h3{font-size:17px;font-weight:600}
+.card .cat{font-size:12px;color:var(--mute);margin-top:3px}
+.card .go{width:42px;height:42px;flex:0 0 42px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;transition:.3s}
+.card:hover .go{background:var(--grad);border-color:transparent;transform:rotate(-45deg)}
+.card .count{position:absolute;top:14px;left:14px;background:rgba(11,13,26,.75);backdrop-filter:blur(6px);font-size:12px;padding:6px 12px;border-radius:999px}
+.card.feat{grid-column:span 2}
+.card.feat .ph{aspect-ratio:16/8.4}
+@media(max-width:760px){.card.feat{grid-column:span 1}.grid{grid-template-columns:1fr}}
+.hide{display:none!important}
+
+/* MASONRY */
+.mason{columns:4 260px;column-gap:18px}
+.mason figure{break-inside:avoid;margin:0 0 18px;border-radius:14px;overflow:hidden;cursor:zoom-in;position:relative;border:1px solid var(--line);opacity:0;transform:translateY(30px) scale(.98);transition:opacity .6s,transform .6s}
+.mason figure.in{opacity:1;transform:none}
+.mason figure img{width:100%;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.mason figure:hover img{transform:scale(1.05)}
+.mason figure:after{content:'⤢';position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:50%;background:rgba(11,13,26,.7);display:flex;align-items:center;justify-content:center;opacity:0;transition:.3s}
+.mason figure:hover:after{opacity:1}
+
+/* SERVICES */
+.svc{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.svc div{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;transition:.35s;opacity:0;transform:translateY(30px)}
+.svc div.in{opacity:1;transform:none}
+.svc div:hover{border-color:var(--coral);transform:translateY(-6px)}
+.svc .ic{width:48px;height:48px;border-radius:14px;background:rgba(255,90,54,.12);color:var(--coral);display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:16px}
+.svc h4{font-size:17px;margin-bottom:6px}
+.svc p{font-size:14px;color:var(--mute);line-height:1.6}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about p{color:var(--mute);line-height:1.8;margin-top:16px}
+.tools{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.tools span{border:1px solid var(--line);padding:8px 16px;border-radius:999px;font-size:13px}
+.review{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:34px}
+.review .st{color:var(--sun);font-size:22px;letter-spacing:4px}
+.review q{display:block;font-family:'Playfair Display',serif;font-style:italic;font-size:30px;margin:12px 0}
+.review small{color:var(--mute)}
+@media(max-width:860px){.about{grid-template-columns:1fr}}
+
+/* CTA */
+.final{text-align:center;background:radial-gradient(circle at 50% 0,rgba(255,90,54,.25),transparent 60%),var(--bg2);border-top:1px solid var(--line)}
+.final h2{font-size:clamp(40px,6vw,80px)}
+.final p{color:var(--mute);margin:16px auto 34px;max-width:560px;line-height:1.7}
+footer{padding:30px 0;text-align:center;color:#5d6390;font-size:13px;border-top:1px solid var(--line)}
+
+/* LIGHTBOX */
+.lb{position:fixed;inset:0;background:rgba(6,7,14,.94);z-index:100;display:none;flex-direction:column}
+.lb.open{display:flex;animation:fade .3s}
+@keyframes fade{from{opacity:0}}
+.lb .top{display:flex;justify-content:space-between;align-items:center;padding:18px 26px;gap:16px}
+.lb .top h3{font-size:18px}.lb .top small{color:var(--mute);display:block;font-size:13px;font-weight:400}
+.lb .x{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:none;color:#fff;font-size:22px;cursor:pointer}
+.lb .stage{flex:1;overflow-y:auto;padding:0 26px 40px}
+.lb .stage img{max-width:1100px;width:100%;margin:0 auto 18px;border-radius:12px;opacity:0;transform:translateY(20px);transition:.6s}
+.lb .stage img.in{opacity:1;transform:none}
+.lb .bar{display:flex;justify-content:center;gap:12px;padding:16px;border-top:1px solid var(--line)}
+.fab{position:fixed;right:22px;bottom:22px;z-index:60}
+
+</style>
+</head>
+<body>
+
+<nav id="nav"><div class="wrap">
+  <a href="#top" class="logo">Maliha<span>.</span></a>
+  <div class="links"><a href="#work">Work</a><a href="#latest">Latest</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+  <a class="btn hire" href="#">Hire me on Upwork ↗</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="wrap">
+    <div>
+      <span class="tag"><i></i>Available for new projects</span>
+      <h1>Maliha<br>Yahya<span style="color:var(--coral)">.</span></h1>
+      <div class="typed">I design <b id="typed">brand kits</b></div>
+      <p>Senior brand &amp; visual designer with 8+ years of experience. I help businesses look premium with logos, brand identities, packaging, social media and UI that turn attention into customers.</p>
+      <div class="cta"><a class="btn hire" href="#">Hire me on Upwork ↗</a><a class="btn ghost" href="#work">View my work ↓</a></div>
+      <div class="stats">
+        <div><b data-n="8">0</b><span>Years experience</span></div>
+        <div><b data-n="1000">0</b><span>Designs delivered</span></div>
+        <div><b data-n="40">0</b><span>Brands served</span></div>
+      </div>
+    </div>
+    <div class="collage-box"><div class="collage" id="collage"></div></div>
+  </div>
+</header>
+
+<div class="marquee"><div class="track" id="track"></div></div>
+
+<section id="work"><div class="wrap">
+  <div class="sh">
+    <div><div class="kick">Selected work</div><h2>Projects that <em class="s">stand out</em></h2></div>
+    <p class="sub">Click any project to see the full case. Use the categories to jump straight to what you need.</p>
+  </div>
+  <div class="filters" id="filters"></div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section id="latest" style="padding-top:20px"><div class="wrap">
+  <div class="sh">
+    <div><div class="kick">Latest work</div><h2>Social media <em class="s">wall</em></h2></div>
+    <p class="sub">Fresh posts and ad creatives for fashion, food, real estate, retail, tech and lifestyle brands. Click any post to view it large.</p>
+  </div>
+  <div class="mason" id="mason"></div>
+  <div style="text-align:center;margin-top:34px"><button class="btn ghost" id="more" style="cursor:pointer;font-size:14px;color:#fff">Load more posts ↓</button></div>
+</div></section>
+
+<section id="services" style="background:var(--bg2);border-block:1px solid var(--line)"><div class="wrap">
+  <div class="sh"><div><div class="kick">Services</div><h2>What I can <em class="s">do for you</em></h2></div><a class="btn hire" href="#">Start a project ↗</a></div>
+  <div class="svc">
+    <div><div class="ic">01</div><h4>Brand Kits &amp; Identity</h4><p>Logo, colours, typography, stationery, merch and brand guidelines – a complete, consistent system.</p></div>
+    <div><div class="ic">02</div><h4>Logo Design</h4><p>Memorable wordmarks, monograms, mascots and Arabic calligraphy logos with full vector files.</p></div>
+    <div><div class="ic">03</div><h4>Packaging Design</h4><p>Boxes, labels and pouches for food, toys and pet products – print-ready dielines.</p></div>
+    <div><div class="ic">04</div><h4>Social Media Design</h4><p>Scroll-stopping posts, carousels, stories and ad creatives with monthly content plans.</p></div>
+    <div><div class="ic">05</div><h4>UI / UX &amp; Web</h4><p>Clean app and website interfaces, landing pages and AI product UI.</p></div>
+    <div><div class="ic">06</div><h4>Print &amp; Events</h4><p>Media walls, flex banners, brochures, certificates and book covers.</p></div>
+    <div><div class="ic">07</div><h4>Photo Editing</h4><p>Retouching, background removal, product photos and photo manipulation.</p></div>
+    <div><div class="ic">08</div><h4>Video Editing</h4><p>Reels, Shorts, YouTube edits, thumbnails and motion graphics.</p></div>
+  </div>
+</div></section>
+
+<section id="about"><div class="wrap about">
+  <div>
+    <div class="kick">About me</div>
+    <h2>Design with a <em class="s">business mind</em></h2>
+    <p>I'm Maliha – a senior brand and visual designer from Pakistan with 8+ years of experience and 1000+ projects delivered for tech, education, real estate, food, insurance, travel and retail brands in Pakistan, the UK and the Middle East.</p>
+    <p>With an MBA background, I don't just make things look good – I design to communicate clearly, build trust and bring you enquiries.</p>
+    <div class="tools"><span>Adobe Illustrator</span><span>Photoshop</span><span>InDesign</span><span>Premiere Pro</span><span>After Effects</span><span>Figma</span><span>CapCut</span><span>Canva</span></div>
+  </div>
+  <div class="review">
+    <div class="st">★★★★★</div>
+    <q>Very nice work!!</q>
+    <small>Upwork client · Halloween T-shirt Designs · 5.0 rating</small>
+    <div class="cta" style="margin-top:26px"><a class="btn hire" href="#">See my Upwork profile ↗</a><a class="btn ghost" id="tshirt" href="#">T-shirt project</a></div>
+  </div>
+</div></section>
+
+<section class="final" id="contact"><div class="wrap">
+  <div class="kick" style="justify-content:center">Let's work together</div>
+  <h2>Have a project <em class="s">in mind?</em></h2>
+  <p>Logo, brand kit, packaging, social media or UI – send me a message on Upwork and I'll reply quickly with ideas and a clear quote.</p>
+  <a class="btn hire" href="#" style="font-size:16px;padding:16px 32px">Hire me on Upwork ↗</a>
+</div></section>
+<footer>© 2026 Maliha Yahya · Brand &amp; Visual Designer</footer>
+
+<a class="btn hire fab" href="#">Hire me ↗</a>
+
+<div class="lb" id="lb">
+  <div class="top"><div><h3 id="lbT"></h3><small id="lbC"></small></div><button class="x" id="lbX">×</button></div>
+  <div class="stage" id="lbS"></div>
+  <div class="bar"><a class="btn hire" href="#">Want something like this? Hire me ↗</a></div>
+</div>
+
+<script>
+const UPWORK='https://www.upwork.com/freelancers/~0175cb3cc6cf6c400b';
+const TSHIRT=UPWORK+'?p=1191056667617988608';
+const B=(pid,s)=>{const [h,k,e]=s.split(' ');return `https://mir-s3-cdn-cf.behance.net/project_modules/1400/${h}${pid}.${k}.${e||'jpg'}`};
+const BS=(pid,s)=>B(pid,s).replace('/1400/','/max_632/');
+
+// ---- BEHANCE PROJECTS (top priority) ----
+const BP=[
+['brand','Frost Giants – Brand Kit','Sports brand: logo, apparel, merch',205967503,['0708d4 66c4a1eac076f','56fd4a 66c4a1eabbf2f png','6353a1 66c4a1eabf7e6 png','83c392 66c4a1eabd535 png','496d3f 66c4a1eabe24c png','f82fab 66c4a1eac10d1 png'],1],
+['brand','Code Wave Solution','Tech company brand identity',199444823,['f6394c 66519f61c4acf','38feb1 66519f61c4362','324f12 66519f5e9499c','be5955 66519f5f59557','904f9c 66519f5f5a48b','98f714 66519f5f59d30']],
+['brand','AltittudeTechs','Brand identity & stationery',205305821,['8b8c9b 66b8e3c0220b3','db70f9 66b8e3c0258cf','635ac3 66b8e3c02384a','c69e3a 66b8e3c02545c','3ac930 66b8e3c021c49','c08389 66b8e3c02489c']],
+['brand','Voltix','Energy brand – logo & branding',207571145,['193f04 66e0190af3c7f png','f56ed9 66e0190af342c png','428569 66e01a57a0fd4 png','401f05 66e01a57a32b7 png','7db926 66e01a57a281d png','c13e1b 66e01a57a09ff png']],
+['brand','Zeeworc','Brand identity & portfolio',242939099,['f09c12 6977a00ea0314','c63093 6977a00ea18ef','b820db 6977a00ea265c','a740fd 6977a00ea42dc','f1cf92 6977a00ea3c8b','675459 6977a00ea3520','282d6d 6977a00ea0ad7','1ce674 6977a00ea2048']],
+['brand','Hertz','Brand identity system',200238551,['e6082f 665f316229dae','9f9f74 665f31622a572','4bee74 665f31622ab57','5d4a86 665f3158e2bd4','a4e586 665f3158e230b png','316932 665f3158e329f']],
+['brand','Paragon Global Services','Corporate branding',231869029,['8036aa 689186b0288e0','721cc9 689186b0294a2','6d17be 689186b028ef3','3ced80 689186b0e8948','62d9a9 689186b0e8446','943452 689186b0e7ccb','f8dec2 689186b1c1e17','95dfe1 689186b1c1694']],
+['pack','Mega XXL – Box & Label','Packaging design',243162215,['f11ddb 697b99e09e901','dd2283 697b99e0a0a27','e6fdfc 697b99e0a022b','d222ae 697b99e09f5dd','389330 697b99e09fd22','9edc55 697b99e0a1182','614328 697b99e09e109','08f38d 697b99e09ef90'],1],
+['pack','Al Meirah Royal Basmati','Rice packaging',199000627,['922d1b 664ae402d3ede','1f25dc 664ae402d34c7 png','dc6827 664ae402d522b','8f0237 664ae402d481f']],
+['pack','Tastee Premium Basmati','Rice packaging',180210073,['cb4c6b 65071fd1c1fc6','97fbe7 650720e6b0d87','77921e 650720e6b3327','fa4d68 650720e6b000b','8a443d 650720e6b2688','1c0f87 650720e6b1a05']],
+['pack','Creative Builders','Toy set packaging',208272853,['4e8ffd 66ebdc5adad7d','00658a 66ebdc5adc489','4f1110 66ebdc5ad9ed2','973ad0 66ebdc5adb64c','e4485d 66ebdc5adcc35','55587e 66ebdc5adf7d9']],
+['pack','Toy Packaging','Box design',207828887,['1e0308 66e40a1cb1142','3de92a 66e40a1cb08ef','7d4e50 66e40a1cb2ec4','1b89ba 66e40a1cb4125','4e3db4 66e40a1cb36e3','8af4ff 66e40a1cb004d']],
+['pack','Synergy Natural Pet','Pet product packaging',180136593,['455327 6505861aaf758 png','0ce23b 6505861aa7779 png','903b56 6505861aa65b4 png','562581 6505861aabd95 png','468f14 6505861aa4d0c png','ed4e8b 6505861aada84 png']],
+['logo','Hidayah','Logo presentation',179505943,['436200 64fab54a8a6c6','9fac07 64fab54a8dae7','4dcde1 64fab54a8eb3f','16b9b3 64fab54a88645','dc6d3b 64fab54a8c99a','691491 64fab54a896db']],
+['logo','Khidmat-ul-Quran','Arabic logo presentation',179560433,['3eaadc 64fb79f1d42bf','5ea6a7 64fb79f1d1a32','3fc7c6 64fb79f1d36fa','547914 64fb79f1d0e32','5c52ac 64fb79f1d2896']],
+['logo','Morning Hero','Logo presentation',179562191,['a6a674 64fb813092fd2','7781b9 64fb813090699','d4146e 64fb81308f778','d91a55 64fb8130922a1','e34766 64fb8130950d4','5d3e71 64fb81309154d']],
+['logo','Reforest.eco','Eco brand logo',179559325,['49414e 64fb756043161','0d4f2d 64fb756044ffb','07c96d 64fb75604417d','78dbcd 64fb756045f3a']],
+['logo','Basketball Team','Sports logo',123404165,['b98882 60edc2505b230','64a2f4 60edc2505ab82','ab2503 60edc2505b9c0','995826 60edc25005ff8']],
+['ui','Reviewlore','Web app UI/UX',232443317,['362899 689c613902801','bcb536 689c613902018','5a1ad6 689c613901a6e','5d7a1f 689c6139bb92a','94bf01 689c6139bab04','67a48f 689c6139bb082','79c1e7 689c613a83415','0638d8 689c613a83c63'],1],
+['ui','Ask Maududi – AI Chatbot','AI product UI',231951747,['d7b02a 6892d9b8aeb96','846112 6892d9b8af2fb','0bc391 6892d9b8afa7f','fa145f 6892d9b98615a','31ce00 6892d9b986cb5','157937 6892d9b9874fb','c9ef3b 6892d9ba4ae82','517ea0 6892d9ba4a37d']],
+['ui','Bravo Six','App UI/UX & social kit',199436749,['273ad7 6651728bc683c','a5fae5 6651728c6af48','271045 6651728c6b766','dff410 6651728c6a9ca','766e3b 6651728d302eb','ea5845 6651728d3079a']],
+['ui','Website Design','Web design',150907973,['aa3670 6303133c9f16f png','42018d 6303133c9f628']],
+['social','The Interact Store','Social media campaign',163444951,['f975da 63e5bebe31912','5bdea4 63e5bebb1420a','7ad0e4 63e5bebb14f13','15a6f1 63e5bebb134b9','fd7753 63e5bebb8be31','e4d6fe 63e5bebb8a0d7']],
+['social','Planet Signs','Social media campaign',163444701,['aa90b4 63e5bd4741064','35dcd9 63e5bd43456a6','9454d1 63e5bd43446ea','efc646 63e5bd43d477d','977d40 63e5bd43d66a6','e5a7b2 63e5bd43d56d4']],
+['social','Red Panda','Social media campaign',163360045,['7617de 63e487d08bff3','b36389 63e480e73236e png','f2ccf4 63e480e0327cb png','0409dd 63e480e03459a png','46f418 63e480e0337a7 png','9538e0 63e480e0c789a png']],
+['social','Taste of Arabia','Restaurant social media',162420295,['3ea612 63d55a1e85a1a','822208 63d55a1b048e3','fdeaab 63d55a1b66ee1','1b548e 63d55a1b67f24','438344 63d55a1b65d4b','71a80e 63d55a1bceee7']],
+['social','Meharmah Heights','Real estate social media',163060603,['4e966b 63dff7233f3f7','ba41ef 63dff720b491e','f92a8c 63dff720b5e15','2014cf 63dff7214bf7d','3f3b4e 63dff7214d23d','c8769f 63dff721cedfd']],
+['social','ZEM Realtors','Real estate social media',163059545,['983654 63dff36747b11','c25d12 63dff4f4b9d63','b45235 63dff363212eb','ff3310 63dff363220ed','e69bb7 63dff36322ed7','74bd38 63dff363bcb52']],
+['social','Canal 44','Social media campaign',162417829,['86e0ff 63d552e88bfde','451430 63d54fc291e6c','778d71 63d54fc292e7a','378904 63d54fc293e25','8b89eb 63d551000f286','793bcd 63d55100102be']],
+['social','Giramondo','Travel social media',162417179,['b1b6f2 63d5563e493c1 png','4a1ef6 63d5563e48309','630a87 63d5563776c0f','23f88c 63d5563777aea','c87273 63d55637e7c9d png','d37467 63d55637e6a7d']],
+['social','Pakistan LowBot','AI brand social media',229286635,['684340 68626c5030757 png','dd86df 68626c5031439','79acd5 68626c4aa1da2','1426c4 68626c4aa16cc','7d5ab8 68626c4b43af9','c52cb9 68626c4b4319d']],
+['social','AivaStark','Tech social media',229285547,['8cf878 686268f86f4ba','8c542b 68626a96d68ec','492859 68626a96d6ec9','a68917 68626a97670e8','509f42 68626a9767bb0','b3753f 68626a98247b1']],
+['social','Paragon Overseas Education','Education social media',229519081,['167d2d 68661f3c0b64b','c282e7 68661f2994695','e5b43b 68661f29959bd','e6f622 68661f2995046','512f11 68661f2a82f5d','324bef 68661f2a833f6']],
+['social','Metro T9 Electric','Industrial social media',176123171,['e7ebaa 64bfb1f410bda png','cd2a1e 64bfab3034739 png','80d3ba 64bfb1f40b859 png','3ede40 64bfb1f40fa33 png','123193 64bfb1f40e749 png','e8f714 64bfb1f411dd7 png']],
+['print','Islamic Book Cover','Book cover design',210785825,['5aa687 67178d45652c3','f57f01 67178d4565c1a','c6eef6 67178d45672b2','573d03 67178d45664a3','881ae3 67178d4566cf6']],
+['video','YouTube Thumbnails','Thumbnail design',119166759,['0d6938 60982bea40551']]
+];
+
+// ---- LOCAL PROJECTS (from my drive) ----
+const LP=[
+['brand','Digital Hub Studio','Agency logo & launch campaign',['../digital hub/logo/Digital Hub logo ama-01.jpg','../digital hub/social media post/Social Media Post 1.jpg','../digital hub/social media post/Social Media Post 2.jpg','../digital hub/social media post/Social Media Post  3.jpg','../digital hub/social media post/PPC.jpg']],
+['brand','Al Yusra Transport','Bilingual identity & stationery',['../post design/suleman work/20_business_card.jpg','../post design/suleman work/front.jpg','../post design/suleman work/letterhead-2.jpg','../post design/suleman work/invoice.jpg']],
+['logo','Logo Collection','Al Huda, Ayat Developers, Umrah Transport, Edworld',['../post design/insure kar/logo.jpg','../post design/ayat developer/logo-ayat-developer.png','../post design/insure kar/FINAL LOGO-04.jpg','../edworld/Edworld logo.png']],
+['social','Insure Kar','Insurance social media',['../post design/insure kar/car-insurance.jpg','../post design/insure kar/health-insurance.jpg','../post design/insure kar/travel-insurance.jpg','../post design/insure kar/life-insurance.jpg','../post design/insure kar/bike-insurance.jpg','../post design/insure kar/5-reason-to-buy-car.jpg']],
+['social','Edworld Study Abroad','Education social media',['../edworld/edworld-5.jpg','../edworld/edworld-6.jpg','../edworld/edworld-7.jpg','../edworld/edworld-8.jpg','../edworld/edworld-9.jpg','../edworld/edworld-10.jpg']],
+['social','Dar-e-Arqam Schools','Monthly social media management',['../das/admission-open.jpg','../das/teacher-day.jpg','../das/hiring-post.jpg','../das/1.jpg','../das/print/10X4-ft.jpg']],
+['print','Event Branding','Media walls, certificates, standees',['../post design/insure kar print/media-wall-2.jpg','../post design/insure kar/certificates-designs.jpg','../post design/insure kar/certificates-designs-member.jpg','../das/print/4X4-feet.jpg']],
+['print','Apparel & Merch','Staff polo & T-shirt designs',['../post design/insure kar/tshirt-design-Black.jpg','../post design/insure kar/tshirt-design-Black-01.jpg']]
+];
+
+const CATS={all:'All Work',brand:'Brand Kits',pack:'Packaging',logo:'Logo Design',social:'Social Media',ui:'UI / UX & Web',print:'Print & Merch',video:'Video & Thumbnails'};
+const P=[];
+const COV={205967503:'372b52205967503.Y3JvcCwxNzgzLDEzOTQsNjc1LDQyOA.jpg',199444823:'ffd66c199444823.Y3JvcCwxODMzLDE0MzQsMjQ1LDEz.jpg',205305821:'d47400205305821.Y3JvcCwxOTIzLDE1MDQsOTIzLDEwOQ.jpg',207571145:'e29c41207571145.Y3JvcCwxOTQ1LDE1MjIsMCw3MzY.jpg',242939099:'b757e8242939099.Y3JvcCwzNDEzLDI2NzAsNTc0LDA.jpg',200238551:'6e5c5c200238551.Y3JvcCwyODIxLDIyMDYsMCwxMw.jpg',231869029:'2f63aa231869029.Y3JvcCw5NzQsNzYyLDAsMA.png',243162215:'96abd0243162215.Y3JvcCwzODM1LDMwMDAsMzMyLDA.jpg',199000627:'d74495199000627.Y3JvcCwxNTg1LDEyNDAsODIsMA.jpg',180210073:'5243c4180210073.Y3JvcCwyODc3LDIyNTEsMCww.jpg',208272853:'e70c1e208272853.Y3JvcCw5NzQsNzYyLDAsMA.png',207828887:'66dd8e207828887.Y3JvcCw5NzQsNzYyLDAsMA.png',180136593:'31c1dd180136593.Y3JvcCw0MjYyLDMzMzQsMTE2LDA.png',179505943:'4a8b90179505943.Y3JvcCwyMDQ2LDE2MDEsOTc3LDA.jpg',179560433:'dbdd72179560433.Y3JvcCwxODYwLDE0NTUsMTA2OCww.jpg',179562191:'07b827179562191.Y3JvcCwxMzgzLDEwODEsMCww.png',179559325:'2d7625179559325.Y3JvcCwyMTk2LDE3MTgsNDYyLDA.jpg',123404165:'475fff123404165.Y3JvcCwzNTc5LDI4MDAsMzEwLDA.jpg',232443317:'504dfe232443317.Y3JvcCw5NzQsNzYyLDAsMA.jpg',231951747:'0046eb231951747.Y3JvcCw5NzQsNzYyLDAsMA.png',199436749:'e27715199436749.Y3JvcCwyODIxLDIyMDYsMCwxMw.jpg',150907973:'cad505150907973.Y3JvcCwxMjc1LDk5NywwLDI0OTY.jpg',163444951:'cabe9e163444951.Y3JvcCwxNDI1LDExMTUsMTI4Nyww.jpg',163444701:'21ad85163444701.Y3JvcCwxNDI1LDExMTUsMTI4Nyww.jpg',163360045:'8d7330163360045.Y3JvcCwyODU0LDIyMzMsNDUyLDA.jpg',162420295:'3b9954162420295.Y3JvcCwyODUxLDIyMzAsMjU3NSww.jpg',163060603:'0a0559163060603.Y3JvcCwxNDI2LDExMTYsMTI4NSww.jpg',163059545:'6423e2163059545.Y3JvcCwxNDI2LDExMTYsMTI4NSww.jpg',162417829:'f45490162417829.Y3JvcCwyODQ5LDIyMjksMjU3NCww.jpg',162417179:'8176e2162417179.Y3JvcCwxNDI2LDExMTYsMTI4NSww.jpg',229286635:'ae34f5229286635.Y3JvcCw5NzQsNzYyLDAsMA.png',229285547:'dd8b5a229285547.Y3JvcCw5NzQsNzYyLDAsMA.png',229519081:'ab3568229519081.Y3JvcCw5NzQsNzYyLDAsMA.png',176123171:'524935176123171.Y3JvcCwyMjk3LDE3OTcsODEzLDA.png',210785825:'8783d7210785825.Y3JvcCw5NzQsNzYyLDAsMA.png',119166759:'2241cc119166759.Y3JvcCwxMDI0LDgwMCwwLDA.jpg'};
+BP.forEach(r=>P.push({cat:r[0],t:r[1],d:r[2],imgs:r[4].map(s=>B(r[3],s)),thumb:COV[r[3]]?'https://mir-s3-cdn-cf.behance.net/projects/max_808/'+COV[r[3]]:BS(r[3],r[4][0]),feat:!!r[5]}));
+// online (GitHub Pages): local images live in the "work" folder of the site
+const ONLINE=location.protocol.startsWith('http');
+const fix=s=>ONLINE?'work/'+encodeURIComponent(s.split('/').pop()):s;
+LP.forEach(r=>P.push({cat:r[0],t:r[1],d:r[2],imgs:r[3].map(fix),thumb:fix(r[3][0])}));
+
+// hire links
+document.querySelectorAll('.hire').forEach(a=>{a.href=UPWORK;a.target='_blank';a.rel='noopener'});
+document.getElementById('tshirt').href=TSHIRT;document.getElementById('tshirt').target='_blank';
+
+// nav
+const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>40));
+
+// typed
+const words=['brand kits','logos','packaging','social media','app & web UI','print that sells'];let wi=0,ci=0,del=false;const ty=document.getElementById('typed');
+(function tick(){const w=words[wi];ty.textContent=w.slice(0,ci);if(!del&&ci<w.length)ci++;else if(del&&ci>0)ci--;else{del=!del;if(!del)wi=(wi+1)%words.length;setTimeout(tick,del?1300:250);return;}setTimeout(tick,del?45:85)})();
+
+// collage
+const pick=P.filter(p=>p.thumb.startsWith('http')).slice(0,18).map(p=>p.thumb);
+const col=document.getElementById('collage');
+for(let c=0;c<3;c++){const d=document.createElement('div');d.className='col';const set=pick.filter((_,i)=>i%3===c);[...set,...set].forEach(s=>{const im=new Image();im.src=s;im.referrerPolicy='no-referrer';d.appendChild(im)});col.appendChild(d)}
+
+// marquee
+const names=['Frost Giants','Code Wave','Voltix','AltittudeTechs','Paragon','Mega XXL','Al Meirah','Tastee','Reviewlore','Taste of Arabia','Insure Kar','Edworld','Dar-e-Arqam','Digital Hub','Al Yusra','ZEM Realtors'];
+document.getElementById('track').innerHTML=[...names,...names].map(n=>`<span>${n}<b>✦</b></span>`).join('');
+
+// filters + grid
+const grid=document.getElementById('grid'),fl=document.getElementById('filters');
+Object.entries(CATS).forEach(([k,v])=>{const n=k==='all'?P.length:P.filter(p=>p.cat===k).length;if(!n)return;const b=document.createElement('button');b.innerHTML=`${v}<small>${n}</small>`;b.dataset.k=k;if(k==='all')b.className='on';fl.appendChild(b)});
+P.forEach((p,i)=>{const c=document.createElement('div');c.className='card'+(p.feat?' feat':'');c.dataset.cat=p.cat;
+ c.innerHTML=`<div class="ph"><img src="${p.thumb}" alt="${p.t}" loading="lazy" referrerpolicy="no-referrer"></div><span class="count">${p.imgs.length} images</span><div class="meta"><div><h3>${p.t}</h3><div class="cat">${CATS[p.cat]} · ${p.d}</div></div><div class="go">→</div></div>`;
+ const im=c.querySelector('img');im.onerror=()=>{if(im.src!==p.imgs[0])im.src=p.imgs[0];else c.remove()};
+ c.onclick=()=>openLB(p);grid.appendChild(c)});
+fl.onclick=e=>{const b=e.target.closest('button');if(!b)return;fl.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));const k=b.dataset.k;
+ grid.querySelectorAll('.card').forEach(c=>{const show=k==='all'||c.dataset.cat===k;c.classList.toggle('hide',!show);if(show){c.classList.remove('in');requestAnimationFrame(()=>setTimeout(()=>c.classList.add('in'),30))}});
+ document.getElementById('work').scrollIntoView({behavior:'smooth'})};
+
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.card,.svc div').forEach((el,i)=>{el.style.transitionDelay=(i%6)*60+'ms';io.observe(el)});
+
+// counters
+const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,n=+el.dataset.n;let s=null;const step=t=>{s=s||t;const p=Math.min((t-s)/1600,1);el.textContent=Math.floor(n*(1-Math.pow(1-p,3)))+(p===1?'+':'');if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step);cio.unobserve(el)}));
+document.querySelectorAll('[data-n]').forEach(el=>cio.observe(el));
+
+// lightbox
+const lb=document.getElementById('lb'),lbS=document.getElementById('lbS');
+function openLB(p){document.getElementById('lbT').textContent=p.t;document.getElementById('lbC').textContent=CATS[p.cat]+' · '+p.d;lbS.innerHTML='';lbS.scrollTop=0;
+ p.imgs.forEach((s,i)=>{const im=new Image();im.referrerPolicy='no-referrer';im.onload=()=>setTimeout(()=>im.classList.add('in'),i*80);im.onerror=()=>{if(s.includes('/1400/')&&!im.dataset.r){im.dataset.r=1;im.src=s.replace('/1400/','/max_1200/')}else im.remove()};im.src=s;lbS.appendChild(im)});
+ lb.classList.add('open');document.body.style.overflow='hidden'}
+// latest social media wall (local posts)
+const TIMES='31.59 32.01-1 32.01 32.02-1 32.02 32.05-1 32.05 32.06-1 32.06 32.07-1 32.07-2 32.07 32.08 32.12 32.13-1 32.13 32.14-1 32.14-2 32.14 32.15-1 32.15-2 32.15 32.16-1 32.16-2 32.16 32.17-1 32.17 32.18-1 32.18 32.20-1 32.20 32.21 32.22-1 32.22 32.24-1 32.24 32.26-1 32.26-2 32.26 32.27-1 32.27 32.28 32.29 32.30-1 32.30 32.31 32.32 32.33-1 32.33 32.34-1 32.34 32.35 32.36-1 32.36 32.38-1 32.38 32.40-1 32.40 32.41-1 32.41 32.43-1 32.43 32.44 32.44-1 32.44-2 32.45 32.46 32.47-1 32.47 32.48 32.49 32.50-1 32.50 32.51-1 32.51 32.53 32.54-1 32.54 32.55-1 32.55 32.56 32.57-1 32.57 32.58 32.59 33.00 33.01-1 33.01 33.02 33.03-1 33.03 33.04-1 33.04-2 33.04 33.05-1 33.05 33.06-1 33.06-2 33.06';
+// images are read from the "posts" folder next to this file; if not found there, from Downloads
+const PNAME=t=>{const [h,n]=t.split('-');return encodeURIComponent(`WhatsApp Image 2026-11-15 at 4.${h} AM${n?` (${n})`:''}.jpeg`)};
+const POSTS=TIMES.split(' ').map(t=>'posts/'+PNAME(t));
+const FALLBACK=s=>'file:///C:/Users/My%20pc/Downloads/'+s.replace('posts/','');
+const mason=document.getElementById('mason'),more=document.getElementById('more');let shown=0;
+const pio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');pio.unobserve(e.target)}}),{threshold:.08});
+function addPosts(n){POSTS.slice(shown,shown+n).forEach(s=>{const f=document.createElement('figure');const im=new Image();im.loading='lazy';im.src=s;im.alt='Social media post design';im.onerror=()=>{if(!ONLINE&&im.src.includes('/posts/'))im.src=FALLBACK(s);else f.remove()};f.appendChild(im);f.onclick=()=>openLB({t:'Social Media Post',cat:'social',d:'Latest work',imgs:[im.src]});mason.appendChild(f);pio.observe(f)});shown+=n;if(shown>=POSTS.length)more.style.display='none'}
+addPosts(24);more.onclick=()=>addPosts(24);
+
+const close=()=>{lb.classList.remove('open');document.body.style.overflow=''};
+document.getElementById('lbX').onclick=close;addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+</script>
+</body>
+</html>
