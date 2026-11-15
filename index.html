@@ -358,11 +358,11 @@ function openLB(p){document.getElementById('lbT').textContent=p.t;document.getEl
 const TIMES='31.59 32.01-1 32.01 32.02-1 32.02 32.05-1 32.05 32.06-1 32.06 32.07-1 32.07-2 32.07 32.08 32.12 32.13-1 32.13 32.14-1 32.14-2 32.14 32.15-1 32.15-2 32.15 32.16-1 32.16-2 32.16 32.17-1 32.17 32.18-1 32.18 32.20-1 32.20 32.21 32.22-1 32.22 32.24-1 32.24 32.26-1 32.26-2 32.26 32.27-1 32.27 32.28 32.29 32.30-1 32.30 32.31 32.32 32.33-1 32.33 32.34-1 32.34 32.35 32.36-1 32.36 32.38-1 32.38 32.40-1 32.40 32.41-1 32.41 32.43-1 32.43 32.44 32.44-1 32.44-2 32.45 32.46 32.47-1 32.47 32.48 32.49 32.50-1 32.50 32.51-1 32.51 32.53 32.54-1 32.54 32.55-1 32.55 32.56 32.57-1 32.57 32.58 32.59 33.00 33.01-1 33.01 33.02 33.03-1 33.03 33.04-1 33.04-2 33.04 33.05-1 33.05 33.06-1 33.06-2 33.06';
 // images are read from the "posts" folder next to this file; if not found there, from Downloads
 const PNAME=t=>{const [h,n]=t.split('-');return encodeURIComponent(`WhatsApp Image 2026-11-15 at 4.${h} AM${n?` (${n})`:''}.jpeg`)};
-const POSTS=TIMES.split(' ').map(t=>'posts/'+PNAME(t));
-const FALLBACK=s=>'file:///C:/Users/My%20pc/Downloads/'+s.replace('posts/','');
+const POSTS=TIMES.split(' ').map(t=>(ONLINE?'posts/':'whats%20app%20images/')+PNAME(t));
+const FALLBACK=s=>'file:///C:/Users/My%20pc/Downloads/'+s.split('/').pop();
 const mason=document.getElementById('mason'),more=document.getElementById('more');let shown=0;
 const pio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');pio.unobserve(e.target)}}),{threshold:.08});
-function addPosts(n){POSTS.slice(shown,shown+n).forEach(s=>{const f=document.createElement('figure');const im=new Image();im.loading='lazy';im.src=s;im.alt='Social media post design';im.onerror=()=>{if(!ONLINE&&im.src.includes('/posts/'))im.src=FALLBACK(s);else f.remove()};f.appendChild(im);f.onclick=()=>openLB({t:'Social Media Post',cat:'social',d:'Latest work',imgs:[im.src]});mason.appendChild(f);pio.observe(f)});shown+=n;if(shown>=POSTS.length)more.style.display='none'}
+function addPosts(n){POSTS.slice(shown,shown+n).forEach(s=>{const f=document.createElement('figure');const im=new Image();im.loading='lazy';im.src=s;im.alt='Social media post design';im.onerror=()=>{if(!ONLINE&&!im.src.includes('/Downloads/'))im.src=FALLBACK(s);else f.remove()};f.appendChild(im);f.onclick=()=>openLB({t:'Social Media Post',cat:'social',d:'Latest work',imgs:[im.src]});mason.appendChild(f);pio.observe(f)});shown+=n;if(shown>=POSTS.length)more.style.display='none'}
 addPosts(24);more.onclick=()=>addPosts(24);
 
 const close=()=>{lb.classList.remove('open');document.body.style.overflow=''};
